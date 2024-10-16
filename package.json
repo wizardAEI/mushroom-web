@@ -1,5 +1,6 @@
 {
   "name": "mushroom-webgl",
+  "packageManager": "yarn@1.22.22",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,6 +13,5 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
-  },
-  "packageManager": "yarn@3.2.0+sha512.bf8d01800977bb37695aa3a90c4ca70819b727165d8cc5dcc72a4de68d038bb38f49366f779fd2f9bd87f2e42ca70b1b5baefdce8ef4339459448be943d9265e"
+  }
 }
