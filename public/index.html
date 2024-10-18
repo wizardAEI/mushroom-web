@@ -94,11 +94,10 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
       // } else {
+      if (/Window|Mac/i.test(navigator.userAgent)) {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-      //   canvas.style.width = "960px";
-      //   canvas.style.height = "600px";
-      // }
+        container.className = "unity-desktop";
+      }
 
       loadingBar.style.display = "block";
 
