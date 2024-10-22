@@ -60,11 +60,22 @@
 
       var buildUrl = "Build";
       var remoteUrl = "https://mushroomquiz.oss-cn-beijing.aliyuncs.com";
-      var loaderUrl = remoteUrl + "/mushroom webgl.loader.js";
+      const pathname = window.location.pathname;
+      let loaderFile = "/mushroom webgl.loader.js"
+      let dataFile = "/mushroom webgl.data.gz"
+      let frameworkFile = "/mushroom webgl.framework.js.gz"
+      let codeFile = "/mushroom webgl.wasm.gz";
+      if(pathname.startsWith("/test")){ 
+        loaderFile = "/test/mushroom webgl.loader.js"
+        dataFile = "/test/mushroom webgl.data.gz"
+        frameworkFile = "/test/mushroom webgl.framework.js.gz"
+        codeFile = "/test/mushroom webgl.wasm.gz";
+      }
+      var loaderUrl = remoteUrl + loaderFile;
       var config = {
-        dataUrl: remoteUrl + "/mushroom webgl.data.gz",
-        frameworkUrl: remoteUrl + "/mushroom webgl.framework.js.gz",
-        codeUrl: remoteUrl + "/mushroom webgl.wasm.gz",
+        dataUrl: remoteUrl + dataFile,
+        frameworkUrl: remoteUrl + frameworkFile,
+        codeUrl: remoteUrl + codeFile,
         streamingAssetsUrl: "StreamingAssets",
         companyName: "ZZR",
         productName: "Mushroom",
