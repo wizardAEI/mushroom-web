@@ -82,6 +82,12 @@
                 frameworkFile = "/sandbox/mushroom webgl.framework.js.gz";
                 codeFile = "/sandbox/mushroom webgl.wasm.gz";
             }
+            if (pathname.startsWith("/dev")) {
+                loaderFile = "/dev/mushroom webgl.loader.js";
+                dataFile = "/dev/mushroom webgl.data.gz";
+                frameworkFile = "/dev/mushroom webgl.framework.js.gz";
+                codeFile = "/dev/mushroom webgl.wasm.gz";
+            }
             var loaderUrl = remoteUrl + loaderFile;
             var config = {
                 dataUrl: remoteUrl + dataFile,
