@@ -4,6 +4,7 @@ const port = 3003;
 
 // 设置静态资源目录
 app.use(express.static("public"));
+app.use("/dev", express.static("public"));
 app.use("/test", express.static("public"));
 app.use("/sandbox", express.static("public"));
 
